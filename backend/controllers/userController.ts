@@ -10,9 +10,9 @@ import {
     updateUser,
 } from '../services/userService';
 
-//@desc Get all User
-//@route GET /api/User
-//@access Public
+// @desc Get all User
+// @route GET /api/User
+// @access Public
 export const getUsersHandler = asyncHandler(
     async (req: Request, res: Response) => {
         const users = await getUsers();
@@ -21,9 +21,9 @@ export const getUsersHandler = asyncHandler(
     }
 );
 
-//@desc Create a new User
-//@route POST /api/User
-//@access Public
+// @desc Create a new User
+// @route POST /api/User
+// @access Public
 export const createUserHandler = asyncHandler(
     async (req: Request, res: Response) => {
         const createdUser = await createUser(req.body);
@@ -32,9 +32,9 @@ export const createUserHandler = asyncHandler(
     }
 );
 
-//@desc Login a User
-//@route POST /api/User/login
-//@access Public
+// @desc Login a User
+// @route POST /api/User/login
+// @access Public
 export const loginUserHandler = asyncHandler(
     async (req: Request, res: Response) => {
         const user = await loginUser(req.body.email, req.body.password);
@@ -42,9 +42,9 @@ export const loginUserHandler = asyncHandler(
     }
 );
 
-//@desc Get a User by id
-//@route GET /api/User/:id
-//@access Public
+// @desc Get a User by id
+// @route GET /api/User/:id
+// @access Public
 export const getUserHandler = asyncHandler(
     async (req: Request, res: Response) => {
         const user = await getUserById(req.params.id);
@@ -53,9 +53,9 @@ export const getUserHandler = asyncHandler(
     }
 );
 
-//@desc Delete a User by id
-//@route DELETE /api/User/:id
-//@access Private
+// @desc Delete a User by id
+// @route DELETE /api/User/:id
+// @access Private
 export const deleteUserHandler = asyncHandler(
     async (req: Request, res: Response) => {
         await deleteUser(req.params.id);
@@ -66,9 +66,9 @@ export const deleteUserHandler = asyncHandler(
     }
 );
 
-//@desc Update a User by id
-//@route PUT /api/User/:id
-//@access Private
+// @desc Update a User by id
+// @route PUT /api/User/:id
+// @access Private
 export const updateUserHandler = asyncHandler(
     async (req: Request, res: Response) => {
         const user = await updateUser(req.params.id, req.body);

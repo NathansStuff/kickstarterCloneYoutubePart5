@@ -7,6 +7,15 @@ export default class HttpException extends Error {
         super(message);
         this.status = status;
         this.message = message;
-        this.error = error || null;
+        this.error = error ?? null;
+    }
+}
+
+export function ErrorHandler(error: unknown): HttpException {
+    if (error instanceof HttpException) {
+        throw new HttpException(`Failed to create user: ${error.message}`, 400);
+    } else {
+        console.log(error);
+        throw new HttpException('Unknown error occurred', 500);
     }
 }

@@ -1,14 +1,15 @@
-# kickstarterCloneYoutubePart2
+# kickstarterCloneYoutubePart5
 
 ## Overview
 
 Optional features to make the application more robust and production standard, not necessary for building the basics but worthwhile to develop good practices.
 
--   Eslint
--   Stricter typescript standards
--   Pre commit checking with husky
--   Exporting postman collection
+-   Eslint: Standard typescript
+-   Stricter linting
+-   Nullish Coalescing
+-   No any
+-   Full features of typescript
 
 #### Commands
 
-npm init @eslint/config
+npm i eslint-config-standard-with-typescript

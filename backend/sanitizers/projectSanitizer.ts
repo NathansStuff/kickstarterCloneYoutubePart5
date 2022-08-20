@@ -2,7 +2,9 @@ import { ProjectType } from '../types/projectTypes';
 import HttpException from '../utils/httpException';
 
 export function sanitizeProject(project: ProjectType): ProjectType {
-    const sanitizedProject = <ProjectType>{};
+    const sanitizedProject: ProjectType = {
+        title: '',
+    };
 
     sanitizedProject.title = sanitizeTitle(project.title);
 
